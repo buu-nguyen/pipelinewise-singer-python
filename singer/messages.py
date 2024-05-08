@@ -293,7 +293,7 @@ def parse_message(msg):
 
 
 def format_message(message, option=0):
-    return orjson.dumps(message.asdict(), option=option)
+    return orjson.dumps(message.asdict(), option=option, default=str)
 
 
 def write_message(message):
